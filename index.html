@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="option">
+        <div id="btn1" class="active">&#8230;</div>
+        <div id="btn2">&#9974;</div>
+
+    </div>
+    <div id="main">
+        <div id="box1">
+            <div id="inputs">
+                <input type="text" placeholder="Enter" id="data"/>
+                <div id="msg">Hit enter to get QR code</div>
+            </div>
+            <div id="outputbox">
+                <img src="qr.png"/>
+            </div>
+        </div>
+        <div id="box2">
+           
+           
+            <div id ="msg2">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script type="text/javascript">
+
+var qrcode = new QRCode('outputbox');
+function makeCode(){
+
+    var input = document.getElementById('data');
+    qrcode.makeCode(input.value);
+} 
+$('#data').on('blur',function(){
+
+makeCode();
+}).on('keydown',function(e){
+    if(e.keyCode == 13){
+        makeCode();
+    }
+
+});
+</script>
+
+<!-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+<script type="text/javascript">
+$('#btn2').click(function(){
+    $('#main').animate({'left':'100%'});
+    $('#btn1').removeClass('active');
+    $('#btn2').addClass('active');
+});
+$('#stopbtn').click(function(){
+    $('#stopbtn img').show();
+    $('#stopbtn').hide();
+    var vodeoE1 = document.getElementById('preview');
+    steam = vodeoE1.srcObject;
+    tracks = stream.getTracks();
+    tracks.forEach(function(track){
+        track.stop();
+    });
+    videoE1.srcObject = null;
+});
+
+$('#startbtn').click(function(){
+    $('#startbtn img').hide();
+    $('#stopbtn').show();
+    var scanner = new Instascan.Scanner({
+        video : document.getElementById('preview'),
+        scanPeriod:5,
+        mirror:false
+    });
+    scanner.addListener('scan',function(content){
+        $('#msg2').text(content);
+    });
+    Instascan.Camera.getCameras().then(function(cameras){
+        if(cameras.length>0){
+            scanner.start(caneras[0]);
+            $('[name="option"]').on('change',function(){
+                if($(this).val()==1){
+                    if(cameras[0]!="")
+                    {
+                        scanner.start(cameras[0]);
+                    }
+                    else{
+                        alert("no camera found");
+                    }
+                }
+
+
+                else if($(this).val()==2)
+                {
+                    if( caneras[1]!="")
+                {
+                    scanner.start(cameras[1]);
+                }
+                else{
+                    alert("no back camera found");
+
+                }
+                }
+
+
+
+
+
+
+            });
+
+
+        }
+        else{
+            alert("no camera");
+        }
+
+
+
+    }).catch(function(e){
+        alert(e);
+    });
+}); -->
+
+
+<!-- </script> -->
+</html>

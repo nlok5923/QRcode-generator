@@ -1,0 +1,172 @@
+body{
+    margin:0;
+    overflow:hidden ;
+}
+main{
+    width: 200%;
+    height: 100vh;
+    position: relative;
+    top:0px;
+    left: 0px;
+}
+#box1{
+    width: 50%;
+    height: 100%;
+    background: white;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+
+}
+#box2{
+    width: 50%;
+    height: 100%;
+    background: white;
+    position: relative;
+    top: 0px;
+    left: 50%;
+
+}
+#option{
+    width: 70px;
+    height: 130px;
+    background: black;
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    border-radius: 35px;
+    z-index: 9999;
+}
+
+#btn1,#btn2{
+width: 50px;
+height:50px;
+border-radius: 50%;
+margin-left: 10px;
+margin-top: 10px;
+font-family: arial black;
+font-size: 20px;
+font-weight: bold;
+color: white;
+text-align: center;
+line-height: 40px;
+
+}
+#btn2{
+    line-height: 50px;
+}
+
+.active{
+    background: #ffbb00;
+}
+#data{
+    font-family: arial;
+    font-size: 60px;
+    color: black;
+    padding-bottom: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+    margin-top: 300px;
+    margin-left: 200px;
+}
+#msg{
+    margin-left: 200px;
+    margin-top: 10px;
+    font-family: arial;
+    font-size: 10px;
+
+}
+::placeholder{
+    color: #23242a;
+}
+#outputbox{
+    width: 400px;
+    height: 400px;
+    background: #ffbb00;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgb(0,0, .1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 100px;
+    margin-left: 500px;
+    transform: translateY(-50%);
+    
+}
+#outputbox img{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 300px;
+    position: absolute;
+
+}
+#box2{
+    background: #ffbb00;
+    background-image: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: center;
+
+    
+}
+#title2{
+    font-family: fantasy;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+#scanner video{
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50% ,50%);
+    background-color: white;
+
+}
+#msg2{
+    position: absolute;
+    top:69%;
+    left: 42%;
+    font-family: arial;
+    font-size: 20px;
+}
+
+
+#startbtn{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    z-index:9999;
+    cursor:pointer;
+
+
+}
+#startbtn img{
+    width: 100px;
+}
+#stopbtn{
+    position: absolute;
+    top: 68%;
+    left: 53%;
+    height: 35px;
+    width: 100px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    display: none;
+
+
+}
